@@ -6,14 +6,16 @@ def laptop_crawler(max_pages):
 	
 	page = 1
 	
+	#This loop will allow you to crawl till page you want. 
 	while page <= max_pages:
 
 		url = 'https://www.flipkart.com/search?q=laptop&marketplace=FLIPKART&otracker=start&as-show=on&as=off&page=' + str(max_pages)
 
-		source_code = requests.get(url)
-		only_text = source_code.text
-		soup = BeautifulSoup(only_text)
+		source_code = requests.get(url)													#Gets data from the url.
+		only_text = source_code.text 													#Gets text from the data.
+		soup = BeautifulSoup(only_text)													#Helps dealing with html content
 
+		#Finds link and the title of laptops and prints them.
 		for link in soup.findAll('a', {'class': '_31qSD5'}):
 			href = 'https://www.flipkart.com' + link.get('href')
 			print(href)
