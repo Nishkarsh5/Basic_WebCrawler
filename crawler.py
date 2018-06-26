@@ -19,12 +19,23 @@ def laptop_crawler(max_pages):
 		for link in soup.findAll('a', {'class': '_31qSD5'}):
 			href = 'https://www.flipkart.com' + link.get('href')
 			print(href)
+			print("\n")
 			l = soup.find('div', {"class": "_3wU53n"})
 			title = l.text
 			print(title)
 			print("\n")
+			get_specifications(url)
+			print("\n")
+			print("\n")
 
 		page += 1
 
+def get_specifications(url):
+	source_code = requests.get(url)
+	only_text = source_code.text
+	soup = BeautifulSoup(only_text)
+
+	for sp in soup.findAll('li', {'class': 'tVe95H'}):
+		print("--" + sp.string) 
 
 laptop_crawler(1)	

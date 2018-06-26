@@ -1,5 +1,5 @@
 # Basic_WebCrawler
-Getting the link and name of laptops available on flipkart 
+Getting the link, name and specifications of laptops available on flipkart. 
 
 ## Prerequisites
 ### Modules
