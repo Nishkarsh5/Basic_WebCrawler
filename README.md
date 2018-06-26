@@ -3,11 +3,11 @@ Getting the link and name of laptops available on flipkart
 
 ## Prerequisites
 ### Modules
--requests
+- requests
 ```
 pip install requests
 ```
--BeautifulSoup
+- BeautifulSoup
 ```
 pip install bs4
 ```
