@@ -6,7 +6,7 @@ def laptop_crawler(max_pages):
 	
 	page = 1
 	
-	#This loop will allow you to crawl till page the you want. 
+	#This loop will allow you to crawl till the page you want. 
 	while page <= max_pages:
 
 		url = 'https://www.flipkart.com/search?q=laptop&marketplace=FLIPKART&otracker=start&as-show=on&as=off&page=' + str(max_pages)
